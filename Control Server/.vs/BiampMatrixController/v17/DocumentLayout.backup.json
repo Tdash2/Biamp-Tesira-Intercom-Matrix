@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{E2DF8CFE-E7EF-222D-1025-AE8D759D22AB}|BiampMatrixController.csproj|c:\\users\\tj\\desktop\\biamp-tesira-intercom-matrix\\control server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E2DF8CFE-E7EF-222D-1025-AE8D759D22AB}|BiampMatrixController.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2DF8CFE-E7EF-222D-1025-AE8D759D22AB}|BiampMatrixController.csproj|c:\\users\\tj\\desktop\\biamp-tesira-intercom-matrix\\control server\\wwwroot\\partylines.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E2DF8CFE-E7EF-222D-1025-AE8D759D22AB}|BiampMatrixController.csproj|solutionrelative:wwwroot\\partylines.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "partylines.js",
+              "DocumentMoniker": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\partylines.js",
+              "RelativeDocumentMoniker": "wwwroot\\partylines.js",
+              "ToolTip": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\partylines.js",
+              "RelativeToolTip": "wwwroot\\partylines.js",
+              "ViewState": "AgIAABcAAAAAAAAAAAAmwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-21T20:53:28.015Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAH4AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-21T20:25:48.688Z",
               "EditorCaption": ""

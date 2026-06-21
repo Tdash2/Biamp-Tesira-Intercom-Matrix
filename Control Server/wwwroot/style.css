@@ -48,3 +48,41 @@ th
     flex: 1;
     min-width: 300px;
 }
+.topbar {
+    margin-bottom: 15px;
+}
+
+    .topbar input {
+        padding: 6px;
+        width: 250px;
+    }
+
+    .topbar button {
+        padding: 6px 10px;
+    }
+
+.grid {
+    display: flex;
+    gap: 20px;
+}
+
+.panel {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+    li:hover {
+        background: #f3f3f3;
+    }

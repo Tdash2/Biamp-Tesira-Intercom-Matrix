@@ -7,7 +7,7 @@ namespace BiampMatrixController.Services;
 public class TesiraService
 {
     private readonly object _lock = new();
-
+    private PartyLineConfigService _config;
     private SshClient? _client;
     private ShellStream? _shell;
 
@@ -16,9 +16,12 @@ public class TesiraService
     public List<InputPort> Inputs { get; private set; } = [];
     public List<OutputPort> Outputs { get; private set; } = [];
 
-    public TesiraService(IConfiguration config)
+    public TesiraService(
+        IConfiguration config,
+        PartyLineConfigService partyConfig)
     {
         _host = config["Tesira:Host"] ?? "192.168.1.100";
+        _config = partyConfig;
     }
 
     public async Task InitializeAsync()
@@ -248,5 +251,74 @@ public class TesiraService
         {
             item.Name = name;
         }
+    }
+    public async Task ApplyPartyLine(PartyLine pl)
+    {
+        foreach (var input in pl.Inputs)
+        {
+            foreach (var output in pl.Outputs)
+            {
+                await SetCrosspointAsync(input, output, true);
+            }
+        }
+    }
+
+    public async Task AddInput(int plId, int input)
+    {
+        var pl = _config.PartyLines.First(x => x.Id == plId);
+
+        if (!pl.Inputs.Contains(input))
+            pl.Inputs.Add(input);
+
+        _config.Save();
+
+        await ApplyPartyLine(pl);
+    }
+    public async Task AddOutput(int plId, int output)
+{
+    var pl = _config.PartyLines.First(x => x.Id == plId);
+
+    if (!pl.Outputs.Contains(output))
+        pl.Outputs.Add(output);
+
+    _config.Save();
+
+    await ApplyPartyLine(pl);
+}
+    public async Task RemoveInput(int plId, int input)
+    {
+        var pl = _config.PartyLines.FirstOrDefault(x => x.Id == plId);
+
+        if (pl == null)
+            throw new Exception($"PartyLine {plId} not found");
+
+        if (pl.Inputs.Contains(input))
+            pl.Inputs.Remove(input);
+
+        // TURN OFF ALL CROSSPOINTS for this input in this PL
+        foreach (var output in pl.Outputs)
+        {
+            await SetCrosspointAsync(input, output, false);
+        }
+
+        _config.Save();
+    }
+    public async Task RemoveOutput(int plId, int output)
+    {
+        var pl = _config.PartyLines.FirstOrDefault(x => x.Id == plId);
+
+        if (pl == null)
+            throw new Exception($"PartyLine {plId} not found");
+
+        if (pl.Outputs.Contains(output))
+            pl.Outputs.Remove(output);
+
+        // TURN OFF ALL CROSSPOINTS for this output in this PL
+        foreach (var input in pl.Inputs)
+        {
+            await SetCrosspointAsync(input, output, false);
+        }
+
+        _config.Save();
     }
 }

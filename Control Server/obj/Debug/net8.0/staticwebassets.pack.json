@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\labels.js"
     },
     {
+      "Id": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\partylines.html",
+      "PackagePath": "staticwebassets\\partylines.html"
+    },
+    {
+      "Id": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\partylines.js",
+      "PackagePath": "staticwebassets\\partylines.js"
+    },
+    {
       "Id": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\style.css",
       "PackagePath": "staticwebassets\\style.css"
     },

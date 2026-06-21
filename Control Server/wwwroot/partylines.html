@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PartyLines</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="/">Crosspoints</a>
+        <a href="/labels.html">Labels</a>
+        <a href="/partylines.html">PartyLines</a>
+    </nav>
+
+    <h1>PartyLines</h1>
+
+    <div class="topbar">
+        <input id="newPlName" placeholder="New PartyLine Name">
+        <button onclick="createPartyLine()">Create</button>
+    </div>
+
+    <div class="grid">
+
+        <div class="panel">
+            <h2>PartyLines</h2>
+            <ul id="plList"></ul>
+        </div>
+
+        <div class="panel">
+            <h2>Details</h2>
+
+            <div id="details">
+                Select a PartyLine
+            </div>
+        </div>
+
+    </div>
+
+    <script src="partylines.js"></script>
+
+</body>
+</html>
