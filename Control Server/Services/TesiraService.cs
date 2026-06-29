@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Diagnostics;
+using System.Text.RegularExpressions;
 using BiampMatrixController.Models;
 using Renci.SshNet;
 
@@ -10,7 +11,7 @@ public class TesiraService
     private PartyLineConfigService _config;
     private SshClient? _client;
     private ShellStream? _shell;
-
+    public string Applystatus = "";
     private readonly string _host;
 
     public List<InputPort> Inputs { get; private set; } = [];
@@ -21,20 +22,40 @@ public class TesiraService
         IConfiguration config,
         PartyLineConfigService partyConfig)
     {
-        _host = config["Tesira:Host"] ?? "192.168.1.100";
+        _host = config["Tesira:Host"] ?? "10.10.10.01";
         _config = partyConfig;
     }
 
     public async Task InitializeAsync()
     {
-        Console.WriteLine("Connecting To DSP...");
+        Console.WriteLine("Connecting To DSP..."+ _host);
         await ConnectAsync();
         Console.WriteLine("Syncing Form DSP...");
         await LoadOutputsAsync();
         await LoadInputsAsync();
         Console.WriteLine("Synced From DSP Compleate.");
     }
+    private async Task ApplyForcedCrosspoints()
+    {
+        foreach (var cp in _config.ForcedCrosspoints)
+        {
+            switch (cp.State)
+            {
+                case ForcedState.Default:
+                    // Do nothing. PartyLines determine the state.
+                    break;
 
+                case ForcedState.ForceOn:
+                    
+                    await SetCrosspointAsync(cp.Input, cp.Output, GetFinalCrosspointState(cp.Input, cp.Output));
+                    break;
+
+                case ForcedState.ForceOff:
+                    await SetCrosspointAsync(cp.Input, cp.Output, GetFinalCrosspointState(cp.Input, cp.Output));
+                    break;
+            }
+        }
+    }
     private async Task ConnectAsync()
     {
         await Task.Run(() =>
@@ -103,6 +124,7 @@ public class TesiraService
         return _client != null && _client.IsConnected;
     }
 
+
     public async Task<string> ExecuteAsync(string command)
     {
         return await Task.Run(async () =>
@@ -117,6 +139,7 @@ public class TesiraService
                             ReconnectAsync().Wait();
 
                         _shell!.WriteLine(command);
+                       // Console.WriteLine("Running Command: "+ command);
 
                         var start = DateTime.UtcNow;
 
@@ -296,6 +319,7 @@ public class TesiraService
             foreach (var output in pl.Outputs)
             {
                 await SetCrosspointAsync(input, output, true);
+
             }
         }
     }
@@ -309,72 +333,207 @@ public class TesiraService
 
         _config.Save();
 
-        await ApplyPartyLine(pl);
+        foreach (var output in pl.Outputs)
+        {
+            await ReevaluateCrosspoint(input, output);
+        }
     }
     public async Task RebuildMatrix()
     {
-        // Step 1: clear entire matrix
-        foreach (var input in Inputs)
-            foreach (var output in Outputs)
-                await SetCrosspointAsync(input.Number, output.Number, false);
+        // Clear everything
 
-        // Step 2: rebuild from ALL PartyLines
+        foreach (var input in Inputs)
+        {
+            Applystatus = "Applying Changes to Port:" + input;
+            foreach (var output in Outputs)
+            {
+                await SetCrosspointAsync(
+                    input.Number,
+                    output.Number,
+                    false);
+            }
+        }
+
+        // Apply PartyLines
+
         foreach (var pl in _config.PartyLines)
         {
-            foreach (var input in pl.Inputs)
-                foreach (var output in pl.Outputs)
-                {
-                    await SetCrosspointAsync(input, output, true);
-                }
+            await ApplyPartyLine(pl);
         }
+
+        // Forced routes always win
+
+        await ApplyForcedCrosspoints();
     }
     public async Task AddOutput(int plId, int output)
-{
-    var pl = _config.PartyLines.First(x => x.Id == plId);
-
-    if (!pl.Outputs.Contains(output))
-        pl.Outputs.Add(output);
-
-    _config.Save();
-
-    await ApplyPartyLine(pl);
-}
-    public async Task RemoveInput(int plId, int input)
     {
-        var pl = _config.PartyLines.FirstOrDefault(x => x.Id == plId);
+        var pl = _config.PartyLines.First(x => x.Id == plId);
 
-        if (pl == null)
-            throw new Exception($"PartyLine {plId} not found");
-
-        if (pl.Inputs.Contains(input))
-            pl.Inputs.Remove(input);
-
-        // TURN OFF ALL CROSSPOINTS for this input in this PL
-        foreach (var output in pl.Outputs)
-        {
-            await SetCrosspointAsync(input, output, false);
-        }
+        if (!pl.Outputs.Contains(output))
+            pl.Outputs.Add(output);
 
         _config.Save();
+
+        foreach (var input in pl.Inputs)
+        {
+            await ReevaluateCrosspoint(input, output);
+        }
+    }
+    public async Task RemoveInput(int plId, int input)
+    {
+        var pl = _config.PartyLines.First(x => x.Id == plId);
+
+        // Only proceed if it actually existed
+        if (!pl.Inputs.Contains(input))
+            return;
+
+        pl.Inputs.Remove(input);
+
+        _config.Save();
+
+        var changes = new List<(int input, int output, bool state)>();
+
+        foreach (var output in pl.Outputs)
+        {
+            await ReevaluateCrosspoint(input, output);
+        }
+    }
+
+    public async Task ClearForcedCrosspoint(int input, int output)
+    {
+        var cp = _config.ForcedCrosspoints
+            .FirstOrDefault(x =>
+                x.Input == input &&
+                x.Output == output);
+
+        if (cp != null)
+        {
+            _config.ForcedCrosspoints.Remove(cp);
+            _config.Save();
+        }
+
+        // Recompute what THIS ONE crosspoint should be
+        bool shouldBeOn = IsCrosspointRequiredByPartyLines(input, output);
+
+        await SetCrosspointAsync(input, output, GetFinalCrosspointState(input, output));
+        
+    }
+    private bool IsCrosspointRequiredByPartyLines(int input, int output)
+    {
+        foreach (var pl in _config.PartyLines)
+        {
+            if (pl.Inputs.Contains(input) &&
+                pl.Outputs.Contains(output))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
     public async Task RemoveOutput(int plId, int output)
     {
-        var pl = _config.PartyLines.FirstOrDefault(x => x.Id == plId);
+        var pl = _config.PartyLines.First(x => x.Id == plId);
 
-        if (pl == null)
-            throw new Exception($"PartyLine {plId} not found");
+        pl.Outputs.Remove(output);
 
-        if (pl.Outputs.Contains(output))
-            pl.Outputs.Remove(output);
+        _config.Save();
 
-        // TURN OFF ALL CROSSPOINTS for this output in this PL
+        var changes = new List<(int input, int output, bool state)>();
+
         foreach (var input in pl.Inputs)
         {
-            await SetCrosspointAsync(input, output, false);
+            await ReevaluateCrosspoint(input, output);
+        }
+    }
+    public async Task ForceCrosspoint(
+        int input,
+        int output,
+        ForcedState state)
+    {
+        var cp = _config.ForcedCrosspoints
+            .FirstOrDefault(x =>
+                x.Input == input &&
+                x.Output == output);
+
+        var previousState = cp?.State ?? ForcedState.Default;
+
+        if (cp == null)
+        {
+            cp = new ForcedCrosspoint
+            {
+                Input = input,
+                Output = output,
+                State = state
+            };
+
+            _config.ForcedCrosspoints.Add(cp);
+        }
+        else
+        {
+            cp.State = state;
         }
 
         _config.Save();
+
+        // =========================
+        // FAST APPLY LOGIC
+        // =========================
+
+        bool? desiredState = null;
+
+        switch (state)
+        {
+            case ForcedState.Default:
+                desiredState = IsCrosspointRequiredByPartyLines(input, output);
+                break;
+
+            case ForcedState.ForceOn:
+                desiredState = true;
+                break;
+
+            case ForcedState.ForceOff:
+                desiredState = false;
+                break;
+        }
+        await SetCrosspointAsync(input, output, GetFinalCrosspointState(input, output));
+        
     }
+    private bool IsValidRoute(int input, int output)
+    {
+        return Inputs.Any(i => i.Number == input)
+            && Outputs.Any(o => o.Number == output);
+    }
+
+    private bool GetFinalCrosspointState(int input, int output)
+    {
+        if (!IsValidRoute(input, output))
+            return false;
+
+        var forced = _config.ForcedCrosspoints
+            .FirstOrDefault(x => x.Input == input && x.Output == output);
+
+        if (forced != null)
+        {
+            if (forced.State == ForcedState.ForceOn)
+                return true;
+
+            if (forced.State == ForcedState.ForceOff)
+                return false;
+        }
+
+        foreach (var pl in _config.PartyLines)
+        {
+            if (pl.Inputs.Contains(input) &&
+                pl.Outputs.Contains(output))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public async Task RenamePartyLine(int plId, string newName)
     {
         var pl = _config.PartyLines.FirstOrDefault(x => x.Id == plId)
@@ -383,6 +542,13 @@ public class TesiraService
         pl.Name = newName;
 
         _config.Save();
+    }
+    private async Task ReevaluateCrosspoint(int input, int output)
+    {
+        await SetCrosspointAsync(
+            input,
+            output,
+            GetFinalCrosspointState(input, output));
     }
     public async Task DeletePartyLine(int plId)
     {

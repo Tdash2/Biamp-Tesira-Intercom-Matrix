@@ -66,3 +66,5 @@ C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Debug\net8.0
 C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Debug\net8.0\BiampMatrixController.pdb
 C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Debug\net8.0\BiampMatrixController.genruntimeconfig.cache
 C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Debug\net8.0\ref\BiampMatrixController.dll
+C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\bin\Debug\net8.0\matrixstatus.json

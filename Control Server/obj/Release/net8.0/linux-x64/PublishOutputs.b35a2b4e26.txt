@@ -1,3 +1,4 @@
 C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Release\net8.0\linux-x64\PubTmp\Out\appsettings.json
+C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Release\net8.0\linux-x64\PubTmp\Out\matrixstatus.json
 C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Release\net8.0\linux-x64\PubTmp\Out\BiampMatrixController.pdb
 C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Release\net8.0\linux-x64\PubTmp\Out\BiampMatrixController

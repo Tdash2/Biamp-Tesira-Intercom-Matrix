@@ -37,7 +37,7 @@ function renderList() {
         const option = document.createElement('option');
 
         option.value = pl.id;
-        option.textContent = pl.id +" - "+pl.name;
+        option.textContent = pl.id + " - " + pl.name;
 
         if (selected && selected.id === pl.id)
             option.selected = true;
@@ -198,7 +198,7 @@ function renderDSPLists() {
 <label style="display:flex; align-items:center; gap:6px;     margin: 3px;">
   <input type="checkbox"
          style="margin:0;"
-         onchange="toggleInput(${o.number}, this.checked)"
+         onchange="toggleOutput(${o.number}, this.checked)"
          ${stateOutputs.has(o.number) ? "checked" : ""}>
 
   <span style="display:flex; align-items:center;">

@@ -1,28 +1,28 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAssetEndpoint Include="_content/BiampMatrixController/app.ibdyzki7kh.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ibdyzki7kh"},{"Name":"integrity","Value":"sha256-EtXGNaKSWKitv\u002BLs3b7Ivw/D/5zzqjkp3RciUvC1DbE="},{"Name":"label","Value":"_content/BiampMatrixController/app.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3184"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022EtXGNaKSWKitv\u002BLs3b7Ivw/D/5zzqjkp3RciUvC1DbE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 22 Jun 2026 07:11:09 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BiampMatrixController/app.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-EtXGNaKSWKitv\u002BLs3b7Ivw/D/5zzqjkp3RciUvC1DbE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3184"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022EtXGNaKSWKitv\u002BLs3b7Ivw/D/5zzqjkp3RciUvC1DbE=\u0022"},{"Name":"Last-Modified","Value":"Mon, 22 Jun 2026 07:11:09 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-oUpOQHD4bBZp4F/ORziKcJP0/Qido3X1PHzlsfZjsRc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"6112"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022oUpOQHD4bBZp4F/ORziKcJP0/Qido3X1PHzlsfZjsRc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 26 Jun 2026 21:24:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BiampMatrixController/app.x0802giu6w.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\app.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"x0802giu6w"},{"Name":"integrity","Value":"sha256-oUpOQHD4bBZp4F/ORziKcJP0/Qido3X1PHzlsfZjsRc="},{"Name":"label","Value":"_content/BiampMatrixController/app.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"6112"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022oUpOQHD4bBZp4F/ORziKcJP0/Qido3X1PHzlsfZjsRc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 26 Jun 2026 21:24:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BiampMatrixController/index.6m179n821s.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6m179n821s"},{"Name":"integrity","Value":"sha256-7mimtphIzA4aMWO3sPo9Vu6Oj5Qq55\u002BwJvpHsb9Pf9Y="},{"Name":"label","Value":"_content/BiampMatrixController/index.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1678"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00227mimtphIzA4aMWO3sPo9Vu6Oj5Qq55\u002BwJvpHsb9Pf9Y=\u0022"},{"Name":"Last-Modified","Value":"Fri, 26 Jun 2026 15:23:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BiampMatrixController/index.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-b3r9U7zeFxgZ16QWHbPOLYWX9boJHlWooRfGQTC7jKY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1639"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022b3r9U7zeFxgZ16QWHbPOLYWX9boJHlWooRfGQTC7jKY=\u0022"},{"Name":"Last-Modified","Value":"Mon, 22 Jun 2026 07:09:27 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/BiampMatrixController/index.vkg61wg72l.html">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\index.html'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vkg61wg72l"},{"Name":"integrity","Value":"sha256-b3r9U7zeFxgZ16QWHbPOLYWX9boJHlWooRfGQTC7jKY="},{"Name":"label","Value":"_content/BiampMatrixController/index.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1639"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022b3r9U7zeFxgZ16QWHbPOLYWX9boJHlWooRfGQTC7jKY=\u0022"},{"Name":"Last-Modified","Value":"Mon, 22 Jun 2026 07:09:27 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-7mimtphIzA4aMWO3sPo9Vu6Oj5Qq55\u002BwJvpHsb9Pf9Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1678"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u00227mimtphIzA4aMWO3sPo9Vu6Oj5Qq55\u002BwJvpHsb9Pf9Y=\u0022"},{"Name":"Last-Modified","Value":"Fri, 26 Jun 2026 15:23:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BiampMatrixController/labels.5ud0hhc3ir.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\labels.html'))</AssetFile>
@@ -66,23 +66,23 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"44q4jnr6ul"},{"Name":"integrity","Value":"sha256-NDxdtBLDkXUyD1v9wDZCprX/lMOZFLGBsAJQl\u002BMxwSY="},{"Name":"label","Value":"_content/BiampMatrixController/partylines.html"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2066"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022NDxdtBLDkXUyD1v9wDZCprX/lMOZFLGBsAJQl\u002BMxwSY=\u0022"},{"Name":"Last-Modified","Value":"Mon, 22 Jun 2026 07:04:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/BiampMatrixController/partylines.8vj3imph92.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\partylines.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8vj3imph92"},{"Name":"integrity","Value":"sha256-VMHlXy7IgiB892jONpTnJokBjBzNdb0tgdduZNYNvnM="},{"Name":"label","Value":"_content/BiampMatrixController/partylines.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7744"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022VMHlXy7IgiB892jONpTnJokBjBzNdb0tgdduZNYNvnM=\u0022"},{"Name":"Last-Modified","Value":"Fri, 26 Jun 2026 17:37:15 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BiampMatrixController/partylines.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\partylines.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-NDxdtBLDkXUyD1v9wDZCprX/lMOZFLGBsAJQl\u002BMxwSY="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2066"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022NDxdtBLDkXUyD1v9wDZCprX/lMOZFLGBsAJQl\u002BMxwSY=\u0022"},{"Name":"Last-Modified","Value":"Mon, 22 Jun 2026 07:04:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/BiampMatrixController/partylines.ipxxlhk8zx.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\partylines.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ipxxlhk8zx"},{"Name":"integrity","Value":"sha256-5oGd\u002BZ6MfPkud3utb79bTkS46KvT0bGBfSYZErnjLyM="},{"Name":"label","Value":"_content/BiampMatrixController/partylines.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"7742"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00225oGd\u002BZ6MfPkud3utb79bTkS46KvT0bGBfSYZErnjLyM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 22 Jun 2026 06:31:55 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BiampMatrixController/partylines.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\partylines.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5oGd\u002BZ6MfPkud3utb79bTkS46KvT0bGBfSYZErnjLyM="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"7742"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00225oGd\u002BZ6MfPkud3utb79bTkS46KvT0bGBfSYZErnjLyM=\u0022"},{"Name":"Last-Modified","Value":"Mon, 22 Jun 2026 06:31:55 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VMHlXy7IgiB892jONpTnJokBjBzNdb0tgdduZNYNvnM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"7744"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022VMHlXy7IgiB892jONpTnJokBjBzNdb0tgdduZNYNvnM=\u0022"},{"Name":"Last-Modified","Value":"Fri, 26 Jun 2026 17:37:15 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/BiampMatrixController/style.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\style.css'))</AssetFile>

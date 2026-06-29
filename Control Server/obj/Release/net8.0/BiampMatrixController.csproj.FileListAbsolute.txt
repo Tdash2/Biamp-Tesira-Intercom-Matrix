@@ -73,3 +73,4 @@ C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Release\net8
 C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Release\net8.0\BiampMatrixController.pdb
 C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Release\net8.0\BiampMatrixController.genruntimeconfig.cache
 C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\obj\Release\net8.0\ref\BiampMatrixController.dll
+C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\bin\Release\net8.0\matrixstatus.json

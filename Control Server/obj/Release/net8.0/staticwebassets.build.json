@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4jaTURFRkRjeG0VHMG8KrMjem1mfpEzkcXSTNcyDfqc=",
+  "Hash": "o1kl+BrLrxQIjieP960uxVxyCViEgrL9tMQbLEiBK28=",
   "Source": "BiampMatrixController",
   "BasePath": "_content/BiampMatrixController",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ibdyzki7kh",
-      "Integrity": "EtXGNaKSWKitv+Ls3b7Ivw/D/5zzqjkp3RciUvC1DbE=",
+      "Fingerprint": "20xk335dw3",
+      "Integrity": "EkOssfvUD+IrYuJcq5BLBxitxreDpcJ9lHUm6o3Um8w=",
       "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app.js"
@@ -52,8 +52,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vkg61wg72l",
-      "Integrity": "b3r9U7zeFxgZ16QWHbPOLYWX9boJHlWooRfGQTC7jKY=",
+      "Fingerprint": "6m179n821s",
+      "Integrity": "7mimtphIzA4aMWO3sPo9Vu6Oj5Qq55+wJvpHsb9Pf9Y=",
       "CopyToOutputDirectory": "Always",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -157,8 +157,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ipxxlhk8zx",
-      "Integrity": "5oGd+Z6MfPkud3utb79bTkS46KvT0bGBfSYZErnjLyM=",
+      "Fingerprint": "8vj3imph92",
+      "Integrity": "VMHlXy7IgiB892jONpTnJokBjBzNdb0tgdduZNYNvnM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\partylines.js"
@@ -187,7 +187,7 @@
   ],
   "Endpoints": [
     {
-      "Route": "app.ibdyzki7kh.js",
+      "Route": "app.20xk335dw3.js",
       "AssetFile": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\app.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -197,7 +197,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3184"
+          "Value": "6330"
         },
         {
           "Name": "Content-Type",
@@ -205,11 +205,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EtXGNaKSWKitv+Ls3b7Ivw/D/5zzqjkp3RciUvC1DbE=\""
+          "Value": "\"EkOssfvUD+IrYuJcq5BLBxitxreDpcJ9lHUm6o3Um8w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 22 Jun 2026 07:11:09 GMT"
+          "Value": "Fri, 26 Jun 2026 21:29:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -219,7 +219,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ibdyzki7kh"
+          "Value": "20xk335dw3"
         },
         {
           "Name": "label",
@@ -227,7 +227,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-EtXGNaKSWKitv+Ls3b7Ivw/D/5zzqjkp3RciUvC1DbE="
+          "Value": "sha256-EkOssfvUD+IrYuJcq5BLBxitxreDpcJ9lHUm6o3Um8w="
         }
       ]
     },
@@ -242,7 +242,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3184"
+          "Value": "6330"
         },
         {
           "Name": "Content-Type",
@@ -250,11 +250,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"EtXGNaKSWKitv+Ls3b7Ivw/D/5zzqjkp3RciUvC1DbE=\""
+          "Value": "\"EkOssfvUD+IrYuJcq5BLBxitxreDpcJ9lHUm6o3Um8w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 22 Jun 2026 07:11:09 GMT"
+          "Value": "Fri, 26 Jun 2026 21:29:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -264,7 +264,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-EtXGNaKSWKitv+Ls3b7Ivw/D/5zzqjkp3RciUvC1DbE="
+          "Value": "sha256-EkOssfvUD+IrYuJcq5BLBxitxreDpcJ9lHUm6o3Um8w="
+        }
+      ]
+    },
+    {
+      "Route": "index.6m179n821s.html",
+      "AssetFile": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1678"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7mimtphIzA4aMWO3sPo9Vu6Oj5Qq55+wJvpHsb9Pf9Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 26 Jun 2026 15:23:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6m179n821s"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7mimtphIzA4aMWO3sPo9Vu6Oj5Qq55+wJvpHsb9Pf9Y="
         }
       ]
     },
@@ -279,7 +324,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1639"
+          "Value": "1678"
         },
         {
           "Name": "Content-Type",
@@ -287,11 +332,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"b3r9U7zeFxgZ16QWHbPOLYWX9boJHlWooRfGQTC7jKY=\""
+          "Value": "\"7mimtphIzA4aMWO3sPo9Vu6Oj5Qq55+wJvpHsb9Pf9Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 22 Jun 2026 07:09:27 GMT"
+          "Value": "Fri, 26 Jun 2026 15:23:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -301,52 +346,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-b3r9U7zeFxgZ16QWHbPOLYWX9boJHlWooRfGQTC7jKY="
-        }
-      ]
-    },
-    {
-      "Route": "index.vkg61wg72l.html",
-      "AssetFile": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1639"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"b3r9U7zeFxgZ16QWHbPOLYWX9boJHlWooRfGQTC7jKY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 22 Jun 2026 07:09:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vkg61wg72l"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-b3r9U7zeFxgZ16QWHbPOLYWX9boJHlWooRfGQTC7jKY="
+          "Value": "sha256-7mimtphIzA4aMWO3sPo9Vu6Oj5Qq55+wJvpHsb9Pf9Y="
         }
       ]
     },
@@ -642,6 +642,51 @@
       ]
     },
     {
+      "Route": "partylines.8vj3imph92.js",
+      "AssetFile": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\partylines.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7744"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VMHlXy7IgiB892jONpTnJokBjBzNdb0tgdduZNYNvnM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 26 Jun 2026 17:37:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8vj3imph92"
+        },
+        {
+          "Name": "label",
+          "Value": "partylines.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VMHlXy7IgiB892jONpTnJokBjBzNdb0tgdduZNYNvnM="
+        }
+      ]
+    },
+    {
       "Route": "partylines.html",
       "AssetFile": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\partylines.html",
       "Selectors": [],
@@ -679,51 +724,6 @@
       ]
     },
     {
-      "Route": "partylines.ipxxlhk8zx.js",
-      "AssetFile": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\partylines.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7742"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"5oGd+Z6MfPkud3utb79bTkS46KvT0bGBfSYZErnjLyM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 22 Jun 2026 06:31:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ipxxlhk8zx"
-        },
-        {
-          "Name": "label",
-          "Value": "partylines.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-5oGd+Z6MfPkud3utb79bTkS46KvT0bGBfSYZErnjLyM="
-        }
-      ]
-    },
-    {
       "Route": "partylines.js",
       "AssetFile": "C:\\Users\\tj\\Desktop\\Biamp-Tesira-Intercom-Matrix\\Control Server\\wwwroot\\partylines.js",
       "Selectors": [],
@@ -734,7 +734,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7742"
+          "Value": "7744"
         },
         {
           "Name": "Content-Type",
@@ -742,11 +742,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"5oGd+Z6MfPkud3utb79bTkS46KvT0bGBfSYZErnjLyM=\""
+          "Value": "\"VMHlXy7IgiB892jONpTnJokBjBzNdb0tgdduZNYNvnM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 22 Jun 2026 06:31:55 GMT"
+          "Value": "Fri, 26 Jun 2026 17:37:15 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -756,7 +756,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-5oGd+Z6MfPkud3utb79bTkS46KvT0bGBfSYZErnjLyM="
+          "Value": "sha256-VMHlXy7IgiB892jONpTnJokBjBzNdb0tgdduZNYNvnM="
         }
       ]
     },

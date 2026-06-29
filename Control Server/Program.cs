@@ -5,12 +5,20 @@ using System.Net.Sockets;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.AddFilter(
     "Microsoft.AspNetCore.Hosting.Diagnostics",
     LogLevel.Warning);
 builder.Logging.AddFilter("Microsoft", LogLevel.Warning);
+builder.Services.ConfigureHttpJsonOptions(options =>
+{
+    options.SerializerOptions.Converters.Add(
+        new JsonStringEnumConverter()
+    );
+});
+
 
 builder.Services.AddSingleton<TesiraService>();
 builder.Services.AddSingleton<PartyLineConfigService>();
@@ -28,12 +36,19 @@ var config = app.Services.GetRequiredService<PartyLineConfigService>();
 await tesira.InitializeAsync();
 
 
-app.MapGet("/api/matrix", () =>
+app.MapGet("/api/matrix", (PartyLineConfigService config) =>
 {
     return Results.Ok(new
     {
         outputs = tesira.Outputs,
-        inputs = tesira.Inputs
+        inputs = tesira.Inputs,
+
+        forcedCrosspoints = config.ForcedCrosspoints.Select(x => new
+        {
+            x.Input,
+            x.Output,
+            State = x.State.ToString()
+        })
     });
 });
 
@@ -148,7 +163,27 @@ app.MapPost("/api/partyline/delete",
     await tesira.DeletePartyLine(req.PlId);
     return Results.Ok();
 });
+app.MapPost("/api/crosspoint/force",
+async (ForceCrosspointRequest req,
+TesiraService tesira) =>
+{
+    await tesira.ForceCrosspoint(
+        req.Input,
+        req.Output,
+        req.State);
 
+    return Results.Ok();
+});
+app.MapPost("/api/crosspoint/clear",
+async (ClearCrosspointRequest req,
+TesiraService tesira) =>
+{
+    await tesira.ClearForcedCrosspoint(
+        req.Input,
+        req.Output);
+
+    return Results.Ok();
+});
 
 foreach (var ni in NetworkInterface.GetAllNetworkInterfaces())
 {

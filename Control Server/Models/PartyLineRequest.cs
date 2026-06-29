@@ -7,6 +7,7 @@ public class PartyLineRequest
     public int Output { get; set; }
 
 }
+
 public record RenameRequest(int PlId, string Name);
 
 public record DeleteRequest(int PlId);

@@ -3,7 +3,7 @@
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\tj\Desktop\Biamp-Tesira-Intercom-Matrix\Control Server\bin\Release\net8.0\publish\linux\</_PublishTargetUrl>
-    <History>True|2026-06-22T07:28:58.8559554Z||;True|2026-06-22T02:24:21.4143215-05:00||;True|2026-06-21T15:10:00.6094757-05:00||;True|2026-06-21T15:00:57.8184158-05:00||;</History>
+    <History>True|2026-06-26T21:30:56.6585689Z||;True|2026-06-26T12:41:46.1716003-05:00||;True|2026-06-22T02:28:58.8559554-05:00||;True|2026-06-22T02:24:21.4143215-05:00||;True|2026-06-21T15:10:00.6094757-05:00||;True|2026-06-21T15:00:57.8184158-05:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
